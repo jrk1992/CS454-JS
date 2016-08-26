@@ -1,0 +1,32 @@
+
+<div class="container">
+	<h2>{{show.name | uppercase}}</h2>
+	|<span ng-repeat="g in show.genres" class="col-sd-4"> {{g}} | </span>
+	<br/>
+	<br/>
+	<div class="left" ng-if="show.image.medium"  ><img HEIGHT="400px" WIDTH="300px" ng-src="{{show.image.medium}}"> </div>
+	<div class="left" ng-if="!show.image.medium"  ><img HEIGHT="400px" WIDTH="300px" ng-src="../images/photo.jpg"> </div>
+	<div class="right">
+				<h4>Summary</h4>
+				<hr>
+               <p ng-bind-html="show.summary | trustHTML"></p>
+    </div>
+    <div class="right">
+    		<h4>Cast</h4>
+    		<table class="table table-striped">
+    		
+              <!-- <div  > -->
+              	<tr ng-repeat="x in show._embedded.cast">
+	              	<td>	
+	              		<div ng-if="x.character.image.medium"><img  HEIGHT="130px" WIDTH="100px" ng-src="{{x.character.image.medium}}"></div>
+	              		<div ng-if="!x.character.image.medium"><img  HEIGHT="130px" WIDTH="120px" ng-src="../images/photo.jpg">
+	              		</div>
+	              	</td>
+	              	<td><label>{{x.person.name}} . . . . . {{x.character.name}}</label></td>
+	            </tr>
+             <!--  </div> -->
+            </table>
+    </div>
+	
+
+</div>

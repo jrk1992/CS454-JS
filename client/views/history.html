@@ -1,0 +1,11 @@
+<div class="container">
+<h3>Browser History :</h3>
+<hr />
+<div ng-repeat="search in searchHistory" >
+	<div ng-if="cookieValue == search.name" >
+		
+        <a href="../"  ><h4>{{search.text}}</h4></a>
+       	</br>
+	</div>
+</div>
+</div>

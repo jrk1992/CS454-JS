@@ -1,0 +1,53 @@
+.navbar-nav > li > a {
+  line-height: 44px;
+  font-size: 16px;
+}
+
+.character-block {
+  margin-top: 31px;
+  padding: 20px 10px;
+  background: #EFEFEF;
+  overflow:auto;
+}
+
+.more-results-block {
+  margin-top: 20px;
+  padding: 10px 10px;
+  background: #EFEFEF;
+}
+
+.more-results-block a {
+  color: #337ab7;
+}
+
+.left {
+    float: left;
+    width:20%;
+    height: 50%;
+    
+}
+
+.right {
+    float: right;
+    width:60%;
+    height:auto;
+}
+
+ul {
+  border: 0px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.resultList {
+  color: #efefef;
+  padding: 7px;
+}
+
+li.resultList:nth-child(odd) {
+  background: #2b3e50;
+}
+li.resultList:nth-child(even) {
+  background: #2D3238;
+}

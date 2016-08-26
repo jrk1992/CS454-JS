@@ -1,0 +1,21 @@
+<style type="text/css">
+
+</style>
+<div ng-if="show" class="container">
+	<div class="character-block" >
+		<div class="left" ng-if="show.show.image.medium"   ><img ng-src="{{show.show.image.medium}}"> </div>
+    <div class="left" ng-if="!show.show.image.medium"   ><img ng-src="../images/photo.jpg"> </div>
+		<div class="right">
+                <h2 > {{show.show.name}} </h2>
+                <hr />
+              <p  ng-bind-html="show.show.summary | trustHTML"></p>
+              <a href="/show/{{show.show.id}}" class="btn btn-warning">
+              Details
+              </a>
+        </div>
+	    
+		
+	</div>
+
+</div>
+

@@ -1,0 +1,70 @@
+
+
+
+<div class="search-header">
+  <div class="container">
+
+    <div class="row">
+      <!-- <div class="col-md-4"> -->
+
+      <!-- <form> -->
+      <h2 class="v-center">Search for your favorite TV Show</h2>
+
+
+      <div class="input-group">
+       <!--  <div ng-controller="SearchController"> -->
+       <!--  <div ng-controller="TypeaheadController "> -->
+
+       <input type="text" id="s" placeholder="Search here"  class="form-control input-md" uib-typeahead="history.text for history in shistory | filter:$viewValue " ng-model="name" />
+
+       <!--   </div> -->
+
+       <!--  <input type="text" id="sea" placeholder="To Search"  class="form-control input-md"  ng-model="name"/> -->
+       <span class="input-group-btn">
+
+         <button 
+         type="submit"
+         class="btn btn-md btn-warning pull-right"
+         ng-click="search()">
+         search
+       </button>
+     </span>
+
+     <!--  </div> -->
+   </div> 
+   <p ng-show="shows.length===0">
+    <i>no results found</i>
+  </p> 
+  <div>
+
+    <div class="container">
+      <h3>Browser History :</h3>
+      <hr />
+      <div ng-repeat="search in searchHistory" >
+        <div ng-if="cookieValue == search.name" >
+
+          <a href="../" ng-click="search2(search.text)"  ><h4>{{search.text}}</h4></a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  </form> -->
+
+<div ng-if="shows.length>0">
+  <h3>Search Results :</h3>
+</div>
+
+
+<div ng-repeat="show in shows">
+  <div show-preview show="show"></div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+
